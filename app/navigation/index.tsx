@@ -3,8 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import BootomTabNavigator from './bottomTab' 
+import BottomTabNavigator from './bottomTab' 
 import DrawerNavigator from './drawer'
+import MainStack from './MainStack'
 
 // screen navigators
 import HomeScreen from '../screens/Home';
@@ -16,43 +17,20 @@ type RootStackParamList = {
   Home: undefined;
   Root: undefined;
   Drawer: undefined;
-  MainStack: MainStackParamList;
-  HomeStack:{
-    name: string;
-  };
 };
 
-
-type MainStackParamList = {
-  Screen1: undefined;
-  Screen2: undefined;
-  HomeStack:{
-    name: string;
-  };
-};
-const MainStack = createNativeStackNavigator<MainStackParamList>()
-
-const HomeScreenStack = () => {
-  return (
-    <MainStack.Navigator>
-      <MainStack.Screen name="Screen1" component={Screen1Screen} />
-        <MainStack.Screen name="Screen2" component={Screen2Screen} />
-    </MainStack.Navigator>
-  )
-}
-
-const Stack = createStackNavigator<RootStackParamList>();
+const RootStack = createStackNavigator<RootStackParamList>();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName='Home'>
-        {/* <Stack.Screen name="Home" component ={HomeScreen} /> */}
-        {/* <Stack.Screen name="Screen1" component={Screen1Screen} />
-        <Stack.Screen name="Screen2" component={Screen2Screen} /> */}
-        {/* <Stack.Screen name="Drawer" component={DrawerNavigator} options={{headerShown: false}}/> */}
-        <Stack.Screen name="Root" component={BootomTabNavigator}  options={{headerShown: false}} />
-        <Stack.Screen name="HomeStack" component={HomeScreenStack}  options={{headerShown: false}} />
-      </Stack.Navigator>
+    <RootStack.Navigator initialRouteName='Home'>
+       <RootStack.Screen name="Root" component={BottomTabNavigator}  options={{headerShown: false}} />
+        <RootStack.Screen name="Home" component ={HomeScreen} />
+        {/* <RootStack.Screen name="Screen1" component={Screen1Screen} />
+        <RootStack.Screen name="Screen2" component={Screen2Screen} /> */}
+        {/* <RootStack.Screen name="Drawer" component={DrawerNavigator} options={{headerShown: false}}/> */}
+        {/* <RootStack.Screen name="ScreenStack" component={ScreenStack}  options={{headerShown: false}} /> */}
+      </RootStack.Navigator>
   )
 }
 

@@ -3,18 +3,19 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 // bottom navigators
 import HomeScreen from '../screens/Home';
+import MainStack from './MainStack'
 import UserAccountScreen from '../screens/UserAccount';
 import NotificationScreen from '../screens/Notification';
 
 type RootStackParamList = {
   Home: undefined;
   UserAccount: undefined;
-  Notification: undefined;
+  Notification: undefined; 
 };
 
 const BottomTab = createBottomTabNavigator<RootStackParamList>();
 
-const BootomTabNavigator = () => {
+const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator initialRouteName="Home" tabBarOptions={{
       activeTintColor: '#480d64',
@@ -47,4 +48,4 @@ const BootomTabNavigator = () => {
   );
 };
 
-export default BootomTabNavigator;
+export default BottomTabNavigator;
