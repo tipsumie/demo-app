@@ -14,7 +14,7 @@ import { StackParams } from '../../navigations/AuthNavigator';
 
 type Props = NativeStackScreenProps<StackParams>
 
-const Login: React.FC<Props> = () => {
+const Login = () => {
   const navigation = useNavigation();
 
   return (
@@ -41,9 +41,7 @@ const Login: React.FC<Props> = () => {
 
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate(ROUTES.FORGOT_PASSWORD, {
-                userId: 'X0001',
-              })
+              navigation.navigate(ROUTES.FORGOT_PASSWORD)
             }
            >
             <Text style={styles.forgotPassText}>Forgot Password?</Text>

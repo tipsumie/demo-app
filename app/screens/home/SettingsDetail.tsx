@@ -2,10 +2,11 @@ import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react';
 import {StyleSheet, Text, SafeAreaView, TouchableOpacity} from 'react-native';
-import {COLORS, ROUTES} from '../../constants';
+import {COLORS } from '../../constants';
+import { SettingStackParams } from '../../navigations/SettingNavigator';
 
 const Settings = () => {
-  const navigation = useNavigation<NativeStackNavigationProp>()
+  const navigation = useNavigation<NativeStackNavigationProp<SettingStackParams>>()
 
   return (
     <SafeAreaView

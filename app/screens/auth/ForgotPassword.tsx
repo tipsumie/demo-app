@@ -8,7 +8,6 @@ const ForgotPassword = () => {
   return (
     <View style={styles.container}>
       <Text>ForgotPassword</Text>
-      <Text>Params: {route.params.userId}</Text>
     </View>
   );
 };
