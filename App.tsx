@@ -1,17 +1,15 @@
 import React from 'react';
-import {
-  useColorScheme,
-} from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Navigation } from './app/navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import { Text, SafeAreaView } from 'react-native';
+
+import AuthNavigator from './app/navigations/AuthNavigator';
+
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
-        <SafeAreaProvider>
-          <Navigation />
-        </SafeAreaProvider>
+    <NavigationContainer>
+      <AuthNavigator/>
+    </NavigationContainer>
   );
 };
 
