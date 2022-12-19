@@ -29,7 +29,7 @@ const AuthNavigator = () => {
       <Stack.Screen name={ROUTES.LOGIN} component={Login} />
       <Stack.Screen name={ROUTES.REGISTER} component={Register} />
       <Stack.Screen name={ROUTES.FORGOT_PASSWORD} component={ForgotPassword} />
-      <Stack.Screen name={ROUTES.HOME} component={DrawerNavigator} options={{headerShown: false}} />
+      <Stack.Screen name={ROUTES.HOME_DRAWER} component={DrawerNavigator} options={{headerShown: true}} />
     </Stack.Navigator>
   )
 }

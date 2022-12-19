@@ -4,6 +4,7 @@ import {Information, Notifications} from '../screens';
 import {ROUTES, COLORS} from '../constants';
 import BottomTabNavigator from './BottomTabNavigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import CustomDrawer from '../components/CustomDrawer';
 
 export type DrawerStackParams = {
   Home: undefined;
@@ -16,12 +17,13 @@ const Drawer = createDrawerNavigator<DrawerStackParams>();
 const DrawerNavigator = () => {
   return (
     <Drawer.Navigator
+    drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{
-        headerShown: false,
+        headerShown:false,
         drawerActiveBackgroundColor: COLORS.primary,
         drawerActiveTintColor: COLORS.white,
         drawerLabelStyle:{
-          marginLeft:-20,
+          marginLeft: -20,
         }
       }}>
       <Drawer.Screen

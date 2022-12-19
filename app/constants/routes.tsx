@@ -6,6 +6,7 @@ export default {
   HOME: 'Home',
   HOME_TAB: 'HomeTab',
   HOME_DRAWER: 'HomeDrawer',
+  HOME_NAVIGATOR: 'HomeNavigator',
 
   INFORMATION: 'Information',
   INFORMATION_DRAWER: 'InformationDrawer',
@@ -18,5 +19,5 @@ export default {
   SETTINGS_NAVIGATOR: 'SettingsNavigator',
 
   SETTINGS_DETAIL: 'SettingsDetail',
-  PROFILE: 'MyProfile',
+  PROFILE: 'Profile',
 };

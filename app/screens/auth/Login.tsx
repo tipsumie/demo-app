@@ -33,7 +33,7 @@ const Login = () => {
 
           <TouchableOpacity
             onPress={() =>
-              navigation.navigate(ROUTES.HOME)
+              navigation.navigate(ROUTES.HOME_DRAWER)
             }
             >
           <Text style={styles.forgotPassText}>Login Button</Text>

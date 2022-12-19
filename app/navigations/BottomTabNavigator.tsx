@@ -2,6 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {COLORS, ROUTES} from '../constants';
 import {Home, Information, Notifications} from '../screens';
 import SettingNavigator from './SettingNavigator';
+import HomeNavigator from './HomeNavigator';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StyleSheet } from 'react-native';
 
@@ -24,11 +25,11 @@ const BottomTabNavigator = () => {
         tabBarStyle: styles.tabBarStyle,
       }}>
       <Tab.Screen
-        name='Home'
-        component={Home}
+        name={ROUTES.HOME_NAVIGATOR}
+        component={HomeNavigator}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({color}) => <Icon name="home" size={30} color={color} />,
+          tabBarIcon: ({color}) => <Icon name="home" size={30} color={color}  />,
         }}
       />
       <Tab.Screen
